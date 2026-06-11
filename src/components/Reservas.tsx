@@ -122,8 +122,8 @@ export default function Reservas() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
             <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="min-w-0">
+              <div className="flex flex-col gap-5">
+                <div className="w-full">
                   <label className="block text-xs uppercase tracking-[0.15em] text-text-secondary mb-2">
                     Fecha
                   </label>
@@ -134,11 +134,11 @@ export default function Reservas() {
                     onChange={(e) =>
                       setForm((prev) => ({ ...prev, fecha: e.target.value }))
                     }
-                    className="w-full min-w-0 bg-bg-card border border-border/50 px-4 py-3 text-text-primary text-sm focus:outline-none focus:border-gold/60 transition-colors duration-300 [touch-action:manipulation]"
+                    className="w-full bg-bg-card border border-border/50 px-4 py-3 text-text-primary text-sm focus:outline-none focus:border-gold/60 transition-colors duration-300 appearance-none [-webkit-appearance:none]"
                     required
                   />
                 </div>
-                <div className="min-w-0">
+                <div className="w-full">
                   <label className="block text-xs uppercase tracking-[0.15em] text-text-secondary mb-2">
                     Hora
                   </label>
@@ -147,7 +147,7 @@ export default function Reservas() {
                     onChange={(e) =>
                       setForm((prev) => ({ ...prev, hora: e.target.value }))
                     }
-                    className={`w-full min-w-0 bg-bg-card border border-border/50 px-4 py-3 text-sm focus:outline-none focus:border-gold/60 transition-colors duration-300 [touch-action:manipulation] ${
+                    className={`w-full bg-bg-card border border-border/50 px-4 py-3 text-sm focus:outline-none focus:border-gold/60 transition-colors duration-300 ${
                       form.hora ? "text-text-primary" : "text-text-muted"
                     }`}
                     required
@@ -168,7 +168,7 @@ export default function Reservas() {
                     ))}
                   </select>
                 </div>
-                <div className="min-w-0">
+                <div className="w-full">
                   <label className="block text-xs uppercase tracking-[0.15em] text-text-secondary mb-2">
                     Personas
                   </label>
@@ -180,7 +180,7 @@ export default function Reservas() {
                         personas: e.target.value,
                       }))
                     }
-                    className="w-full min-w-0 bg-bg-card border border-border/50 px-4 py-3 text-text-primary text-sm focus:outline-none focus:border-gold/60 transition-colors duration-300 [touch-action:manipulation]"
+                    className="w-full bg-bg-card border border-border/50 px-4 py-3 text-text-primary text-sm focus:outline-none focus:border-gold/60 transition-colors duration-300"
                   >
                     {Array.from({ length: 10 }, (_, i) => i + 1).map((n) => (
                       <option key={n} value={n} className="bg-bg-card">
@@ -189,10 +189,7 @@ export default function Reservas() {
                     ))}
                   </select>
                 </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="min-w-0">
+                <div className="w-full">
                   <label className="block text-xs uppercase tracking-[0.15em] text-text-secondary mb-2">
                     Nombre completo
                   </label>
@@ -202,11 +199,11 @@ export default function Reservas() {
                     onChange={(e) =>
                       setForm((prev) => ({ ...prev, nombre: e.target.value }))
                     }
-                    className="w-full min-w-0 bg-bg-card border border-border/50 px-4 py-3 text-text-primary text-sm focus:outline-none focus:border-gold/60 transition-colors duration-300 [touch-action:manipulation]"
+                    className="w-full bg-bg-card border border-border/50 px-4 py-3 text-text-primary text-sm focus:outline-none focus:border-gold/60 transition-colors duration-300"
                     required
                   />
                 </div>
-                <div className="min-w-0">
+                <div className="w-full">
                   <label className="block text-xs uppercase tracking-[0.15em] text-text-secondary mb-2">
                     Teléfono
                   </label>
@@ -219,7 +216,7 @@ export default function Reservas() {
                         telefono: e.target.value,
                       }))
                     }
-                    className="w-full min-w-0 bg-bg-card border border-border/50 px-4 py-3 text-text-primary text-sm focus:outline-none focus:border-gold/60 transition-colors duration-300 [touch-action:manipulation]"
+                    className="w-full bg-bg-card border border-border/50 px-4 py-3 text-text-primary text-sm focus:outline-none focus:border-gold/60 transition-colors duration-300"
                     required
                   />
                 </div>

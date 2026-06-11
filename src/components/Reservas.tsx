@@ -134,7 +134,7 @@ export default function Reservas() {
                     onChange={(e) =>
                       setForm((prev) => ({ ...prev, fecha: e.target.value }))
                     }
-                    className="w-full bg-bg-card border border-border/50 px-4 py-3 text-text-primary text-sm focus:outline-none focus:border-gold/60 transition-colors duration-300 appearance-none [-webkit-appearance:none]"
+                    className="w-full bg-bg-card border border-border/50 px-4 py-3 text-text-primary text-sm focus:outline-none focus:border-gold/60 transition-colors duration-300"
                     required
                   />
                 </div>
